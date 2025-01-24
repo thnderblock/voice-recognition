@@ -3,4 +3,20 @@
 @tailwind utilities;
 
 @layer components {
+  .neumorphous-on {
+    border-radius: 150px;
+    background: linear-gradient(145deg, #ffffff, #d9dde0);
+    box-shadow: 15px 15px 30px #cdd0d4, -15px -15px 30px #ffffff;
+  }
+
+  .neumorphous-drop-on {
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+  }
+
+  .neumorphous-off {
+    border-radius: 150px;
+    background: linear-gradient(145deg, #d9dde0, #ffffff);
+    box-shadow: 15px 15px 30px #cdd0d4, -15px -15px 30px #ffffff;
+  }
 }

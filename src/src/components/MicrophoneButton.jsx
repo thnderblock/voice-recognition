@@ -1,11 +1,9 @@
-import { useState } from "react";
 import microphone from "../icons/microphone.svg";
-import microphoneOff from "../icons/microphoneOff.svg";
 
 const MicrophoneButton = ({ startListening, stopListening, isListening }) => {
   return (
     <div
-      className="h-[300px] w-[300px] flex rounded-full cursor-pointer shadow-xl"
+      className="h-[300px] w-[300px] flex rounded-full cursor-pointer "
       onClick={() => {
         isListening ? stopListening() : startListening();
       }}
@@ -17,22 +15,16 @@ const MicrophoneButton = ({ startListening, stopListening, isListening }) => {
 
 const MicrophoneOnIcon = () => {
   return (
-    <div className="h-full w-full rounded-full justify-center items-center flex shadow-xl drop-shadow-xl">
-      <img
-        className="h-1/2 mouse-events-none drop-shadow-xl"
-        src={microphone}
-      />
+    <div className="h-full w-full rounded-full justify-center items-center flex  neumorphous-on">
+      <img className="h-1/2 w-1/2 neumorphous-drop-on" src={microphone} />
     </div>
   );
 };
 
 const MicrophoneOffIcon = () => {
   return (
-    <div className="bg-[#F1F1F1] h-full w-full rounded-full justify-center items-center flex shadow-xl drop-shadow-xl">
-      <img
-        className="h-1/2 mouse-events-none drop-shadow-xl"
-        src={microphoneOff}
-      />
+    <div className="bg-[#F1F1F1] h-full w-full rounded-full justify-center items-center flex  neumorphous-off">
+      <img className="h-1/2 w-1/2 neumorphous-drop-on" src={microphone} />
     </div>
   );
 };
